@@ -142,8 +142,8 @@ button {
 .current.nav-list-link::after {
   content: '';
   position: absolute;
-  left: 0;
   bottom: -1px;
+  left: 0;
   display: block;
   width: 100%;
   height: 4px;
@@ -489,7 +489,11 @@ button {
 }
 
 .media-footer {
-  margin-right: auto;
+  margin-right: 80px;
+}
+
+.subs-footer {
+  margin-right: 24px;
 }
 
 .footer-logo {
@@ -546,6 +550,30 @@ button {
 
 .footer-soc-icon {
   fill: var(--light);
+}
+
+.subs-btn {
+  display: block;
+  padding: 8px 24px;
+  background-color: var(--primary-brand);
+  color: #ffffff;
+  font-weight: 500;
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: background-color var(--transition-dur-and-funk);
+}
+
+.subs-space {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--bor-rad);
+}
+
+.subs-btn:hover,
+.subs-btn:focus {
+  background-color: var(--pressed-state);
 }
 
 /* -----------------------modal--------------------- */
