@@ -545,7 +545,7 @@
         <div class="subs-footer">
           <p class="media-title">Subscribe</p>
           <div class="subs-space"></div>
-          <button type="button" class="subs-btn">Subscribe</button>
+          <button class="subs-btn" type="button">Subscribe</button>
         </div>
       </div>
     </footer>
@@ -558,6 +558,50 @@
             <use href="./images/icons.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <p class="modal-slogan">Leave your contacts and we will call you back</p>
+        <form class="contact-form">
+          <ul>
+            <li class="list">
+              <input
+                class="contact-form-input"
+                name="user_name"
+                type="text"
+                required
+                minlength="2"
+                pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
+                title="Name Surname"
+              />
+            </li>
+            <li class="list">
+              <input
+                class="contact-form-input"
+                name="user_phone"
+                type="tel"
+                required
+                pattern="^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$"
+                title="(xxx)xxx-xx-xx"
+              />
+            </li>
+            <li class="list">
+              <input
+                class="contact-form-input"
+                name="user_email"
+                type="email"
+                required
+                pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
+              />
+            </li>
+          </ul>
+          <textarea class="textarea" name="user_message" placeholder="Text input"></textarea>
+          <div class="condition">
+            <input class="condition-marker" type="checkbox" />
+            <p class="condition-item"
+              >I accept the terms and conditions of the
+              <span><a class="condition-link" href="">Privacy Policy</a></span></p
+            >
+          </div>
+          <button class="hero-btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
