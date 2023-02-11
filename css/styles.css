@@ -483,7 +483,6 @@ button {
 
 .footer-container {
   display: flex;
-  /* gap: 120px; */
 }
 
 .footer-holder {
@@ -492,10 +491,6 @@ button {
 
 .media-footer {
   margin-right: 80px;
-}
-
-.subs-footer {
-  margin-right: 24px;
 }
 
 .footer-logo {
@@ -520,10 +515,10 @@ button {
 }
 
 .media-title {
+  display: block;
   margin-bottom: 8px;
   color: var(--primary-background);
   font-weight: 500;
-  font-size: 16px;
   line-height: calc(24 / 16);
   letter-spacing: 0.02em;
   text-align: left;
@@ -554,23 +549,48 @@ button {
   fill: var(--light);
 }
 
+.subs-footer-wrapper {
+  display: flex;
+}
+
 .subs-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   padding: 8px 24px;
   background-color: var(--primary-brand);
   color: #ffffff;
   font-weight: 500;
+  font-size: 16px;
   font-family: inherit;
   line-height: calc(24 / 16);
   letter-spacing: 0.04em;
   transition: background-color var(--transition-dur-and-funk);
 }
 
-.subs-space {
+.subs-btn-icon {
+  fill: #ffffff;
+}
+
+.subs-footer-input {
   width: 264px;
   height: 40px;
+  margin-right: 24px;
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--bor-rad);
+  background-color: transparent;
+  color: #ffffff;
+  line-height: calc(18 / 16);
+  letter-spacing: 0.04em;
+}
+
+.subs-footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: calc(24 / 12);
+  letter-spacing: 0.04em;
 }
 
 .subs-btn:hover,
@@ -662,6 +682,7 @@ button {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
 }
+
 .modal-form-input-icon {
   position: absolute;
   top: 50%;
@@ -688,9 +709,8 @@ button {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--bor-rad);
   color: #000000;
-  font-size: 15px;
+  line-height: calc(18 / 16);
   letter-spacing: 0.04em;
-  line-height: calc(18 / 15);
   transition: border-color var(--transition-dur-and-funk);
 }
 
@@ -727,11 +747,11 @@ button {
 
 .user-policy-aggrement {
   display: flex;
+  margin-top: 8px;
   color: #757575;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.04em;
-  margin-top: 8px;
 }
 
 .user-policy-link {
@@ -741,9 +761,9 @@ button {
 .user-policy-aggrement::before {
   content: '';
   display: block;
-  margin-right: 8px;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1.25px solid var(--dark);
   border-radius: 2px;
   cursor: pointer;
@@ -760,7 +780,7 @@ button {
 }
 
 .modal-form-btn {
-  padding: 16px 64px;
   margin-top: 24px;
+  padding: 16px 64px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

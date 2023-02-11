@@ -542,11 +542,25 @@
             ></li>
           </ul>
         </div>
-        <div class="subs-footer">
-          <p class="media-title">Subscribe</p>
-          <div class="subs-space"></div>
-          <button class="subs-btn" type="button">Subscribe</button>
-        </div>
+        <label class="subs-footer">
+          <span class="media-title">Subscribe</span>
+          <span class="subs-footer-wrapper">
+            <input
+              class="subs-footer-input"
+              name="user_email"
+              type="email"
+              required
+              placeholder="E-mail"
+              pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
+            />
+            <button class="subs-btn" type="submit"
+              >Subscribe
+              <svg class="subs-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-subs"></use>
+              </svg>
+            </button>
+          </span>
+        </label>
       </div>
     </footer>
 
@@ -603,14 +617,14 @@
           </label>
         </form>
         <input
-          id="user-policy"
           class="modal-form-check visually-hidden"
-          type="checkbox"
+          id="user-policy"
           name="user-policy"
+          type="checkbox"
         />
-        <label for="user-policy" class="user-policy-aggrement"
+        <label class="user-policy-aggrement" for="user-policy"
           >I accept the terms and conditions of the&nbsp
-          <a class="user-policy-link" href="">Privacy Policy</a>
+          <a class="user-policy-link" href>Privacy Policy</a>
         </label>
         <button class="hero-btn modal-form-btn" type="submit">Send</button>
       </div>
