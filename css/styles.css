@@ -61,6 +61,7 @@ button {
   border-radius: var(--bor-rad);
   cursor: pointer;
 }
+
 /* ---------------------reset-end------------------ */
 
 .section {
@@ -159,8 +160,8 @@ button {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  line-height: calc(24 / 16);
   color: var(--text);
+  line-height: calc(24 / 16);
   transition: color var(--transition-dur-and-funk);
 }
 
@@ -590,9 +591,9 @@ button {
 }
 
 .backdrop.is-hidden {
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  pointer-events: none; */
+  pointer-events: none;
 }
 
 .modal {
@@ -600,7 +601,7 @@ button {
   top: 50%;
   left: 50%;
   width: 408px;
-  height: 576px;
+  height: 584px;
   padding: 72px 24px 24px 24px;
   border-radius: var(--bor-rad);
   background: #fcfcfc;
@@ -654,62 +655,112 @@ button {
 }
 
 .modal-form-input-desc {
+  display: block;
   padding-bottom: 4px;
   color: var(--subtitle-text);
   font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.04em;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+.modal-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  fill: var(--dark);
+  transition: fill var(--transition-dur-and-funk);
+  transform: translateY(-50%);
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
 }
 
 .modal-form-input {
+  display: block;
   width: 100%;
   height: 40px;
-  margin-bottom: 8px;
   padding-left: 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--bor-rad);
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  line-height: calc(18 / 15);
+  transition: border-color var(--transition-dur-and-funk);
+}
+
+.modal-form-input:focus {
+  border-color: var(--primary-brand);
+  outline: none;
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--primary-brand);
 }
 
 .modal-form-message {
-  width: 100%;
   height: 120px;
-  margin-bottom: 16px;
   padding: 8px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: var(--bor-rad);
+  resize: none;
+}
+
+.modal-form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.04em;
-  resize: none;
 }
 
-.condition {
-  display: flex;
-  margin-bottom: 24px;
+.modal-form-message:focus {
+  border-color: var(--primary-brand);
+  outline: none;
 }
 
 .modal-form-check {
   margin-right: 8px;
 }
 
-.user-policy {
-  margin-right: auto;
+.user-policy-aggrement {
+  display: flex;
   color: #757575;
   font-size: 12px;
-  line-height: 1.33;
+  line-height: calc(16 / 12);
   letter-spacing: 0.04em;
+  margin-top: 8px;
 }
 
 .user-policy-link {
   color: var(--primary-brand);
 }
-/* 
 
-вопросы: 
-1) порешать с кнопкой Send
-2) нет звездочек - значит формы не обяательны к заполеннию?
-3)після натискання кнопки відправити у рядку стану не з'являються дані, що надсилаються на сервер.
-4) в placeholder фраза "Text input" не меняет цвет текста
+.user-policy-aggrement::before {
+  content: '';
+  display: block;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--dark);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-image var(--transition-dur-and-funk);
+}
 
-*/
+.modal-form-check:checked + .user-policy-aggrement::before {
+  background-image: url(../images/checkbox-aggrement.svg);
+  background-position: center;
+}
+
+.modal-form-check:focus + .user-policy-aggrement::before {
+  outline: 1.5px solid #000000;
+}
+
+.modal-form-btn {
+  padding: 16px 64px;
+  margin-top: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
