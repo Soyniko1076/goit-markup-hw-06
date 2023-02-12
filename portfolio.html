@@ -317,25 +317,27 @@
             ></li>
           </ul>
         </div>
-        <label class="subs-footer">
-          <span class="media-title">Subscribe</span>
-          <span class="subs-footer-wrapper">
-            <input
-              class="subs-footer-input"
-              name="user_email"
-              type="email"
-              required
-              placeholder="E-mail"
-              pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
-            />
+        <div class="subs-footer">
+          <p class="media-title">Subscribe</p>
+          <form class="subs-footer-wrapper">
+            <label>
+              <input
+                class="subs-footer-input"
+                name="user_email"
+                type="email"
+                required
+                placeholder="E-mail"
+                pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
+              />
+            </label>
             <button class="subs-btn" type="submit"
               >Subscribe
               <svg class="subs-btn-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-subs"></use>
               </svg>
             </button>
-          </span>
-        </label>
+          </form>
+        </div>
       </div>
     </footer>
   </body>

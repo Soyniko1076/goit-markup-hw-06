@@ -671,12 +671,13 @@ button {
   flex-direction: column;
   width: 100%;
   min-height: 336px;
-  margin: 0 auto;
+  margin: 0 auto 16px;
+  gap: 8px;
 }
 
 .modal-form-input-desc {
   display: block;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   color: var(--subtitle-text);
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -695,10 +696,6 @@ button {
 .modal-form-input-wrapper {
   position: relative;
   display: block;
-}
-
-.modal-form-field {
-  margin-bottom: 8px;
 }
 
 .modal-form-input {
@@ -747,7 +744,6 @@ button {
 
 .user-policy-aggrement {
   display: flex;
-  margin-top: 8px;
   color: #757575;
   font-size: 12px;
   line-height: calc(16 / 12);
