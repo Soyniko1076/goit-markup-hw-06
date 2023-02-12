@@ -489,10 +489,6 @@ button {
   margin-right: 120px;
 }
 
-.media-footer {
-  margin-right: 80px;
-}
-
 .footer-logo {
   display: block;
   margin-bottom: 16px;
@@ -547,6 +543,10 @@ button {
 
 .footer-soc-icon {
   fill: var(--light);
+}
+
+.subs-footer {
+  margin-left: auto;
 }
 
 .subs-footer-wrapper {
